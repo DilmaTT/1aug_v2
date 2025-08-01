@@ -328,7 +328,7 @@ export const TrainingSession = ({ training, onStop }: TrainingSessionProps) => {
     <div className="h-full bg-background flex flex-col sm:flex-row">
       <div className="hidden sm:block w-80 bg-card border-r p-4 space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Статистика</h2>
+          <h2 className="text-lg font-semibold">Статистика: {training.name}</h2>
         </div>
         
         <div className="space-y-3">

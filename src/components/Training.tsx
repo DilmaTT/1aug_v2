@@ -129,7 +129,7 @@ export const Training = ({ isMobileMode = false }: TrainingProps) => {
   };
 
   const handleCreateTraining = (training: any) => {
-    setTrainings(prev => [...prev, training]);
+    setTrainings(prev => [training, ...prev]); // Place new training at the top
   };
 
   const handleDeleteTraining = (trainingId: string) => {
@@ -251,7 +251,7 @@ export const Training = ({ isMobileMode = false }: TrainingProps) => {
                     key={training.id} 
                     className={cn(
                       'cursor-pointer transition-all duration-300',
-                      isMobileMode ? 'py-1 px-2' : (isSelected ? 'p-3' : 'py-2 px-3'), // Adjusted padding for desktop unselected
+                      isMobileMode ? 'py-1 px-2' : (isSelected ? 'p-3' : 'py-1 px-3'), // Changed py-2 to py-1 for desktop unselected
                       isSelected ? 'bg-primary/10 border-primary' : 'hover:bg-muted/50'
                     )}
                     onClick={() => setSelectedTraining(prev => prev === training.id ? null : training.id)}
