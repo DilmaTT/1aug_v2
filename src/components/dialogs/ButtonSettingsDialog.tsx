@@ -369,9 +369,9 @@ export const ButtonSettingsDialog = ({
             isMobileMode ? "pt-3.5 mt-1.5" : "pt-4 mt-2"
           )}>
             <Label className="text-right">Размер</Label>
-            <div className="col-span-3 flex items-center gap-4">
+            <div className="col-span-3 grid grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
-                <Label htmlFor="buttonWidth" className="font-normal">W:</Label>
+                <Label htmlFor="buttonWidth" className="font-normal w-6 text-right">W:</Label>
                 <Input
                   id="buttonWidth"
                   type="number"
@@ -384,7 +384,7 @@ export const ButtonSettingsDialog = ({
                 />
               </div>
               <div className="flex items-center gap-2">
-                <Label htmlFor="buttonHeight" className="font-normal">H:</Label>
+                <Label htmlFor="buttonHeight" className="font-normal w-6 text-right">H:</Label>
                 <Input
                   id="buttonHeight"
                   type="number"
@@ -402,9 +402,9 @@ export const ButtonSettingsDialog = ({
           {/* Group for Position (X, Y) */}
           <div className="grid grid-cols-4 items-center gap-4">
             <Label className="text-right">Позиция</Label>
-            <div className="col-span-3 flex items-center gap-4">
+            <div className="col-span-3 grid grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
-                <Label htmlFor="buttonX" className="font-normal">X:</Label>
+                <Label htmlFor="buttonX" className="font-normal w-6 text-right">X: </Label>
                 <Input
                   id="buttonX"
                   type="number"
@@ -417,7 +417,7 @@ export const ButtonSettingsDialog = ({
                 />
               </div>
               <div className="flex items-center gap-2">
-                <Label htmlFor="buttonY" className="font-normal">Y:</Label>
+                <Label htmlFor="buttonY" className="font-normal w-6 text-right">Y:</Label>
                 <Input
                   id="buttonY"
                   type="number"

@@ -95,7 +95,7 @@ export const ChartEditor = ({ isMobileMode = false, chart, onBackToCharts, onSav
       isFontAdaptive: true,
       fontSize: 16,
       fontColor: 'white',
-      showLegend: false,
+      showLegend: true, // Set to true by default
       legendOverrides: {},
     };
     setButtons((prev) => [...prev, newButton]);

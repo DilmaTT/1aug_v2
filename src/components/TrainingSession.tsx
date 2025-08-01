@@ -146,7 +146,9 @@ export const TrainingSession = ({ training, onStop }: TrainingSessionProps) => {
     if (button.type === 'simple') {
       return usedActions.has(button.id);
     } else if (button.type === 'weighted') {
-      return usedActions.has(button.action1Id) || usedActions.has(button.action2Id);
+      // For weighted buttons, show them only if BOTH of their constituent simple actions
+      // are present in the current range's assigned hands.
+      return usedActions.has(button.action1Id) && usedActions.has(button.action2Id);
     }
     return false;
   });
